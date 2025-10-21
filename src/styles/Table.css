@@ -1,0 +1,135 @@
+/* Contenedor de la tabla */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  background: white;
+}
+
+/* Tabla */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+/* Encabezado */
+.data-table thead {
+  background: var(--color-primary);
+  color: white;
+}
+
+.data-table thead tr {
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+.data-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Cuerpo de la tabla */
+.data-table tbody tr {
+  border-bottom: 1px solid var(--color-bg-light);
+  transition: background-color 0.2s ease;
+}
+
+.data-table tbody tr:hover {
+  background-color: var(--color-bg-light);
+}
+
+.data-table tbody tr.clickable {
+  cursor: pointer;
+}
+
+.data-table tbody tr.clickable:hover {
+  background-color: rgba(123, 174, 127, 0.2);
+}
+
+.data-table td {
+  padding: 0.875rem 1rem;
+  color: var(--color-text-primary);
+}
+
+/* Estado visual */
+.status-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-disponible {
+  background: rgba(158, 200, 162, 0.2);
+  color: var(--color-success);
+}
+
+.status-prestado {
+  background: rgba(161, 77, 77, 0.2);
+  color: var(--color-error);
+}
+
+.status-en_reparacion {
+  background: rgba(94, 110, 90, 0.2);
+  color: var(--color-text-secondary);
+}
+
+.status-activo {
+  background: rgba(123, 174, 127, 0.2);
+  color: var(--color-accent);
+}
+
+.status-devuelto {
+  background: rgba(158, 200, 162, 0.2);
+  color: var(--color-success);
+}
+
+.status-vencido {
+  background: rgba(161, 77, 77, 0.2);
+  color: var(--color-error);
+}
+
+.status-pendiente {
+  background: rgba(161, 77, 77, 0.2);
+  color: var(--color-error);
+}
+
+.status-pagada {
+  background: rgba(158, 200, 162, 0.2);
+  color: var(--color-success);
+}
+
+/* Mensaje vacío */
+.table-empty {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.table-empty p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .data-table {
+    font-size: 0.875rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .data-table th {
+    font-size: 0.8rem;
+  }
+}
