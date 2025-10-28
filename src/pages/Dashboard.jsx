@@ -43,7 +43,7 @@ function Dashboard() {
     setTimeout(() => setSuccessMessage(''), 5000);
   };
 
-  const handleSuccessRealizarPrestamo = (data) => {
+  const handleSuccessRealizarPrestamo = () => {
     setModalRealizarPrestamo(false);
     setSuccessMessage('Préstamo registrado exitosamente');
     setTimeout(() => setSuccessMessage(''), 5000);
@@ -104,87 +104,7 @@ function Dashboard() {
   ];
 
   // Funciones secundarias
-  const secondaryFunctions = [
-    {
-      id: 1,
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-        </svg>
-      ),
-      title: 'Libros',
-      badge: 'Catálogo',
-      action: () => setModalListarLibros(true)
-    },
-    {
-      id: 2,
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-          <circle cx="9" cy="7" r="4"></circle>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-          <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-        </svg>
-      ),
-      title: 'Socios',
-      badge: 'Listado',
-      action: () => setModalListarSocios(true)
-    },
-    {
-      id: 3,
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <line x1="12" y1="1" x2="12" y2="23"></line>
-          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-        </svg>
-      ),
-      title: 'Multas',
-      badge: 'Activas',
-      action: () => setModalListarMultas(true)
-    },
-    {
-      id: 4,
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-          <line x1="16" y1="13" x2="8" y2="13"></line>
-          <line x1="16" y1="17" x2="8" y2="17"></line>
-        </svg>
-      ),
-      title: 'Préstamos Activos',
-      badge: 'En curso',
-      action: () => setModalPrestamosActivos(true)
-    },
-    {
-      id: 5,
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
-          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-          <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-          <line x1="12" y1="22.08" x2="12" y2="12"></line>
-        </svg>
-      ),
-      title: 'Ejemplares',
-      badge: 'Gestión',
-      action: () => setModalGestionarEjemplares(true)
-    },
-    {
-      id: 6,
-      icon: (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-          <line x1="12" y1="9" x2="12" y2="13"></line>
-          <line x1="12" y1="17" x2="12.01" y2="17"></line>
-        </svg>
-      ),
-      title: 'Préstamos Vencidos',
-      badge: 'Urgente',
-      action: () => setModalPrestamosVencidos(true)
-    }
-  ];
+  
 
   return (
     <div className="dashboard-container">
@@ -291,26 +211,7 @@ function Dashboard() {
           </section>
 
           {/* Accesos Rápidos */}
-          <section className="quick-access-section">
-            <h2 className="section-title">Registros</h2>
-            <div className="quick-grid">
-              {secondaryFunctions.map((func) => (
-                <div
-                  key={func.id}
-                  className="quick-card"
-                  onClick={func.action}
-                >
-                  <div className="quick-header">
-                    <div className="quick-icon">
-                      {func.icon}
-                    </div>
-                    <span className="quick-badge">{func.badge}</span>
-                  </div>
-                  <h4>{func.title}</h4>
-                </div>
-              ))}
-            </div>
-          </section>
+          
         </div>
 
         {/* Footer */}

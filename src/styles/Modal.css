@@ -60,14 +60,14 @@
   max-width: 900px;
 }
 
-/* Header del modal */
+/* Header del modal - AZUL COMO EL SIDEBAR */
 .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  border-bottom: 2px solid var(--color-bg-light);
-  background: var(--color-primary);
+  border-bottom: 2px solid #dbeafe;
+  background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
   color: white;
   border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
 }
@@ -157,8 +157,8 @@
 .form-select:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(46, 83, 57, 0.1);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .form-textarea {
@@ -201,14 +201,14 @@
 }
 
 .btn-primary {
-  background: var(--color-primary);
+  background: linear-gradient(180deg, #1e3a8a 0%, #1e40af 100%);
   color: white;
 }
 
 .btn-primary:hover {
-  background: var(--color-hover);
+  background: linear-gradient(180deg, #1e40af 0%, #1e3a8a 100%);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(46, 83, 57, 0.3);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.4);
 }
 
 .btn-primary:disabled {
@@ -225,7 +225,7 @@
 
 .btn-secondary:hover {
   background: var(--color-bg-light);
-  border-color: var(--color-primary);
+  border-color: #2563eb;
 }
 
 /* Mensaje de éxito */
@@ -285,3 +285,5 @@
     width: 100%;
   }
 }
+
+
