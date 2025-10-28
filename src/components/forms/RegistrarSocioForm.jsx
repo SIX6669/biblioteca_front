@@ -81,8 +81,6 @@ function RegistrarSocioForm({ onSuccess, onCancel }) {
         
         <div className="socio-info-box">
           <p><strong>Número de Socio:</strong> #{socioRegistrado.id}</p>
-          <p><strong>Nombre:</strong> {socioRegistrado.nombre}</p>
-          <p><strong>DNI:</strong> {socioRegistrado.dni}</p>
           {socioRegistrado.email && <p><strong>Email:</strong> {socioRegistrado.email}</p>}
         </div>
 

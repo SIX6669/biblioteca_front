@@ -98,29 +98,6 @@ class ComprobanteService {
       doc.text(`#${socio.id}`, 75, yPos);
 
       yPos += 10;
-      doc.setFontSize(11);
-      doc.setTextColor(...colorTexto);
-      doc.setFont('helvetica', 'bold');
-      doc.text('Nombre Completo:', 30, yPos);
-      doc.setFont('helvetica', 'normal');
-      const nombre = socio.nombre || socio.name || 'No especificado';
-      doc.text(String(nombre), 75, yPos);
-
-      yPos += 10;
-      doc.setFont('helvetica', 'bold');
-      doc.text('DNI:', 30, yPos);
-      doc.setFont('helvetica', 'normal');
-      const dni = socio.dni || 'No especificado';
-      doc.text(String(dni), 75, yPos);
-
-      yPos += 10;
-      doc.setFont('helvetica', 'bold');
-      doc.text('Email:', 30, yPos);
-      doc.setFont('helvetica', 'normal');
-      const email = socio.email || 'No registrado';
-      doc.text(String(email), 75, yPos);
-
-      yPos += 10;
       doc.setFont('helvetica', 'bold');
       doc.text('Fecha de Registro:', 30, yPos);
       doc.setFont('helvetica', 'normal');
@@ -196,7 +173,7 @@ class ComprobanteService {
   /**
    * Genera una vista previa del comprobante (retorna el blob en lugar de descargar)
    */
-  generarComprobanteBlob(socio) {
+  generarComprobanteBlob() {
     const doc = new jsPDF();
     // Mismo código de generación...
     return doc.output('blob');
