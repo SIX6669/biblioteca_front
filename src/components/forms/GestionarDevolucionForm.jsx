@@ -22,7 +22,7 @@ function GestionarDevolucionForm({ onSuccess, onCancel }) {
         const response = await axios.get('http://localhost:5000/api/prestamos/activos');
         setPrestamosActivos(response.data);
       } catch (err) {
-        setError('Error al cargar los préstamos activos');
+        setError('Error al cargar los préstamos activos', err);
       } finally {
         setLoadingData(false);
       }

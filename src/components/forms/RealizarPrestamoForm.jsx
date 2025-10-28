@@ -25,7 +25,7 @@ function RealizarPrestamoForm({ onSuccess, onCancel }) {
         setSocios(sociosRes.data);
         setEjemplaresDisponibles(ejemplaresRes.data);
       } catch (err) {
-        setError('Error al cargar los datos');
+        setError('Error al cargar los datos', err);
       } finally {
         setLoadingData(false);
       }
